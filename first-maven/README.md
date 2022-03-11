@@ -1,0 +1,3 @@
+- mvn help:effective-pom (super POM)
+- mvn dependency:help
+- mvn dependency:tree -Dverbose (tree with explanations)
