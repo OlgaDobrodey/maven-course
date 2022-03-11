@@ -1,0 +1,4 @@
+java -version   - Version
+echo %PATH%   - Path
+~/.zshrc  -   Home
+add maven path in envirorment variable
