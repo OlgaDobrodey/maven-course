@@ -1,0 +1,2 @@
+Main-Class: com.itrex.AppRunner
+Class-Path: lib/database-1.0-SNAPSHOT.jar

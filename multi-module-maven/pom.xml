@@ -6,7 +6,7 @@
 
     <groupId>com.itrex</groupId>
     <artifactId>multi-module-maven</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <modules>
         <module>database</module>
         <module>service</module>
@@ -16,6 +16,11 @@
 
     <name>multi-module-maven</name>
     <url>www.google.com</url>
+    <scm>
+        <connection>scm:git@github.com:OlgaDobrodey/maven-course.git</connection>
+        <developerConnection>scm:git@github.com:OlgaDobrodey/maven-course.git</developerConnection>
+        <url>http://documet or url git</url>
+    </scm>
 
     <contributors>
         <contributor>
@@ -23,16 +28,16 @@
         </contributor>
     </contributors>
 
-<!--    project.groupId-->
-<!--    settings.-->
-<!--    ${spring.version}-->
-<!--    env.JAVA.HOME-->
-<!--    System.getProperty -D -->
+    <!--    project.groupId-->
+    <!--    settings.-->
+    <!--    ${spring.version}-->
+    <!--    env.JAVA.HOME-->
+    <!--    System.getProperty -D -->
     <properties>
         <app.env>dev</app.env>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <spring.version>5.1.7.RELEASE</spring.version>
     </properties>
 
@@ -117,19 +122,14 @@
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
-                    <configuration>
-                        <source>16</source>
-                        <target>16</target>
-                        <!--                   <skip>true</skip> skip - test -->
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>compile</goal>
-                            </goals>
-                            <phase>validate</phase>
-                        </execution>
-                    </executions>
+                    <!--                    <executions>-->
+                    <!--                        <execution>-->
+                    <!--                            <goals>-->
+                    <!--                                <goal>compile</goal>-->
+                    <!--                            </goals>-->
+                    <!--                            <phase>validate</phase>-->
+                    <!--                        </execution>-->
+                    <!--                    </executions>-->
                     <!--                added goal in this phase-->
                 </plugin>
                 <plugin>
@@ -199,18 +199,28 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <!--        <configuration>-->
+                <!--          <allowTimestampedSnapshots>true</allowTimestampedSnapshots>-->
+                <!--        </configuration>-->
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>
         <profile>
             <id>prod</id>
-<!--            <activation>-->
-<!--                <activeByDefault>true</activeByDefault>-->
-<!--            </activation>-->
-            <properties>
-                <app.env>prod</app.env>
-                <exampel>test-test</exampel>
-            </properties>
+            <!--            <activation>-->
+            <!--                <activeByDefault>true</activeByDefault>-->
+            <!--            </activation>-->
+            <!--            <properties>-->
+            <!--&lt;!&ndash;                <app.env>prod</app.env>&ndash;&gt;-->
+            <!--&lt;!&ndash;                <exampel>test-test</exampel>&ndash;&gt;-->
+            <!--            </properties>-->
             <build>
                 <plugins>
                     <plugin>
