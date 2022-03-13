@@ -17,6 +17,20 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.9.0</version>
             </plugin>
+            <plugin>
+                <groupId>com.itrex</groupId>
+                <artifactId>hello-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <goals><goal>hello</goal></goals>
+                        <phase>validate</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <message>Message from config</message>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
