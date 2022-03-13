@@ -19,7 +19,7 @@
     <scm>
         <connection>scm:git@github.com:OlgaDobrodey/maven-course.git</connection>
         <developerConnection>scm:git@github.com:OlgaDobrodey/maven-course.git</developerConnection>
-        <url>http://documet or url git</url>
+        <url>https://github.com/OlgaDobrodey/maven-course.git</url>
     </scm>
 
     <contributors>
